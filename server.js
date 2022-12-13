@@ -21,10 +21,10 @@ app.get("/", (req, res) => {
   //   "https://cdn.pixabay.com/photo/2018/03/31/05/07/blockchain-3277336__340.png";
   // res.send("<h1" + "WELCOME TO BIG HEART FOUNDATION SERVER" + " ></h1>");
   res.send(
-    "<h1>Hey, There! You Are Currently Running Saas-Ilegal Blockchain Backend Server</h1>"
+    "<h1>Hey, There! You Are Currently Running BIG HEART FOUNDATION SERVER Backend Server</h1>"
   );
 });
-app.set("port", port);
+// app.set("port", port);
 app.use('/public', EXPRESS.static('public'));
 // configuration to setup socket.io on express server.
 const server = require('http').Server(app);
