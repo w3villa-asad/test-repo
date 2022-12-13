@@ -1,0 +1,6 @@
+{
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/e4de27f2-b425-4016-ba66-8cea9ed5a2a9/resourceGroups/hvr/providers/Microsoft.Web/sites/bigheartbackend",
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true
+}

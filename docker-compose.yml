@@ -1,0 +1,31 @@
+version: "2"
+services:
+  bigheart-node: 
+    image: bigheart:0.0.1
+    container_name: bigheart-node
+    restart: always
+    build: .
+    ports: 
+      - "3004:3000"
+    depends_on:
+      - bigheart-database
+    environment:
+      - DB_HOST=bigheart-database
+      - DB_PORT=27017
+      - DB_NAME=bigheart
+      - DB_PROTOCOL=mongodb
+      - SERVER_HOST=0.0.0.0
+      - SERVER_PORT=3000
+      - DOMAIN_PROTOCOL=http
+      - DOMAIN_HOST=127.0.0.1
+      - DOMAIN_PORT=3000
+      - NODE_ENV=development
+      - PLATFORM=bigheart
+  bigheart-database:
+    container_name: bigheart-database
+    image: mongo:4.0
+    restart: always
+    volumes:
+      - ./db-data:/data/db
+    ports:
+      - "27018:27017"
